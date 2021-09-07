@@ -12,7 +12,7 @@
 
 <meta name="author" content="Théo Tacail" />
 
-<meta name="date" content="2021-09-01" />
+<meta name="date" content="2021-09-07" />
 
 <title>1 - Install isobxr</title>
 
@@ -112,15 +112,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">1 - Install isobxr</h1>
 <h4 class="author">Théo Tacail</h4>
-<h4 class="date">2021-09-01</h4>
+<h4 class="date">2021-09-07</h4>
 
 
 <div id="TOC">
 <ul>
 <li><a href="#installation">Installation</a><ul>
-<li><a href="#install-isobxr">Install isobxr</a></li>
-<li><a href="#download-templates-and-tutorials">Download templates and tutorials</a></li>
+<li><a href="#released-version">Released version</a></li>
+<li><a href="#development-version">Development version</a></li>
+<li><a href="#load-isobxr">Load <strong>isobxr</strong></a></li>
 </ul></li>
+<li><a href="#download-templates-and-tutorials">Download templates and tutorials</a></li>
 </ul>
 </div>
 
@@ -131,19 +133,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <hr />
 <div id="installation" class="section level1">
 <h1>Installation</h1>
-<div id="install-isobxr" class="section level2">
-<h2>Install isobxr</h2>
-<p>The <a href="https://ttacail.github.io/isobxr/">isobxr</a> is available as a source package from <a href="https://github.com/">GitHub</a>.</p>
-<p>The installation process can be done as follows:</p>
-<ol style="list-style-type: decimal">
+<div id="released-version" class="section level2">
+<h2>Released version</h2>
+<p>The isobxr package is now on the <a href="https://cran.r-project.org/">CRAN</a> (Comprehensive R Archive Network) and can be found on its <a href="https://CRAN.R-project.org/package=isobxr">isobxr CRAN page</a>.</p>
+<p>It is available as a released package and can be installed directly from CRAN by calling:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;isobxr&quot;</span>)</code></pre></div>
+</div>
+<div id="development-version" class="section level2">
+<h2>Development version</h2>
+<p>The <a href="https://ttacail.github.io/isobxr/">isobxr</a> package is available as a source package in its development version from the <a href="https://github.com/ttacail/isobxr">GitHub isobxr master repository</a>.</p>
+<p>The isobxr development version can be installed as follows:</p>
+<ul>
 <li><p>Download and install/update <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">Rstudio</a>.</p></li>
 <li><p>Download and install package <strong>devtools</strong> as follows:</p></li>
-</ol>
+</ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</code></pre></div>
-<ol start="3" style="list-style-type: decimal">
+<ul>
 <li>Download and install <a href="https://ttacail.github.io/isobxr/">isobxr</a> source package.</li>
-</ol>
+</ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;ttacail/isobxr/isobxr&quot;</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>) <span class="co"># FALSE if no pandoc/Rstudio </span></code></pre></div>
+</div>
+<div id="load-isobxr" class="section level2">
+<h2>Load <strong>isobxr</strong></h2>
 <p>You can load the <a href="https://ttacail.github.io/isobxr/">isobxr</a> package in R as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(isobxr)</code></pre></div>
 <p>Here is the package description of the current version, where you can find the required minimal versions of dependencies:</p>
@@ -151,8 +162,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>You can locally browse the vignettes as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">browseVignettes</span>(<span class="st">&quot;isobxr&quot;</span>)</code></pre></div>
 </div>
-<div id="download-templates-and-tutorials" class="section level2">
-<h2>Download templates and tutorials</h2>
+</div>
+<div id="download-templates-and-tutorials" class="section level1">
+<h1>Download templates and tutorials</h1>
 <p>The tutorial can be run using the tutorial files embedded in the package extdata. The tutorial files are then called by setting the workdir argument as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">workdir &lt;-<span class="st"> &quot;/Users/username/Documents/1_ABC_tutorial&quot;</span>
 <span class="co"># or</span>
@@ -168,7 +180,6 @@ workdir &lt;-<span class="st"> &quot;use_isobxr_demonstration_files&quot;</span>
 <li><p>download the <a href="https://ttacail.github.io/source/demos/1_ABC_tutorial.zip">tutorial files</a>. These files provide the user with all master files and R commands used throughout all demonstrations shown in the vignettes.</p></li>
 </ol>
 <hr />
-</div>
 </div>
 
 
